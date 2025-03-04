@@ -1,0 +1,190 @@
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls
+file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ vim file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ root:x:0:0:root:/root:/bin/bash
+kyt:x:1000:1000:Bak-bash: root:x:0:0:root:/root:/bin/bash: No such file or directory
+yt,,,:/home/bakbakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ bakyt:x:1000:1000:Bakyt,,,:/home/bakyt:/bin/bash
+est:x:1001:10-bash: bakyt:x:1000:1000:Bakyt,,,:/home/bakyt:/bin/bash: No such file or directory
+01:Guest Userbakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ guest:x:1001:1001:Guest User,,,:/home/guest:/bin/bash
+guest:x:1001:1001:Guest: command not found
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo adduser testuser
+info: Adding user `testuser' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `testuser' (1002) ...
+info: Adding new user `testuser' (1002) with group `testuser (1002)' ...
+info: Creating home directory `/home/testuser' ...
+info: Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for testuser
+Enter the new value, or press ENTER for the default
+        Full Name []: test
+        Room Number []: test
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+info: Adding new user `testuser' to supplemental / extra groups `users' ...
+info: Adding user `testuser' to group `users' ...
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,bakyt
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:bakyt
+fax:x:21:
+voice:x:22:
+cdrom:x:24:bakyt
+floppy:x:25:bakyt
+tape:x:26:
+sudo:x:27:bakyt
+audio:x:29:bakyt
+dip:x:30:bakyt
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:bakyt
+sasl:x:45:
+plugdev:x:46:bakyt
+staff:x:50:
+games:x:60:
+users:x:100:bakyt,testuser
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+systemd-timesync:x:996:
+input:x:995:
+sgx:x:994:
+kvm:x:993:
+render:x:992:
+messagebus:x:101:
+syslog:x:102:
+systemd-resolve:x:991:
+uuidd:x:103:
+_ssh:x:104:
+landscape:x:105:
+polkitd:x:990:
+admin:x:106:
+netdev:x:107:bakyt
+bakyt:x:1000:
+developers:x:1001:
+testuser:x:1002:
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo usermod -aG developers testuser
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ groups testuser
+testuser : testuser users developers
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$
+bakyt@DESKTOP-PPLFB2P:~$ ls
+wsl
+bakyt@DESKTOP-PPLFB2P:~$ git clone https://github.com/eshmurzaevbakyt/auca-com-4241-information-security-spring-2025.git
+Cloning into 'auca-com-4241-information-security-spring-2025'...
+remote: Enumerating objects: 36, done.
+remote: Counting objects: 100% (36/36), done.
+remote: Compressing objects: 100% (25/25), done.
+remote: Total 36 (delta 4), reused 31 (delta 2), pack-reused 0 (from 0)
+Receiving objects: 100% (36/36), 13.84 KiB | 174.00 KiB/s, done.
+Resolving deltas: 100% (4/4), done.
+bakyt@DESKTOP-PPLFB2P:~$ ls
+auca-com-4241-information-security-spring-2025  wsl
+bakyt@DESKTOP-PPLFB2P:~$ cd auca-com-4241-information-security-spring-2025/
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ ls
+README.md  lab-1  lab-2  lab-3  lab-4  lab-8
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ mkdir lab-6
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ ls
+README.md  lab-1  lab-2  lab-3  lab-4  lab-6  lab-8
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ cd lab-6
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ touch file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt 4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt 4096 Mar  4 09:13 ..
+-rw-r--r-- 1 bakyt bakyt    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ -rw-r--r--  1 bakit users  0 Mar 4 10:00 file.txt
+-rw-r--r--: command not found
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ chmod 754 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt 4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt 4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 bakyt bakyt    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt 4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt 4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 bakyt bakyt    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo chown root file.txt
+[sudo] password for bakyt:
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt 4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt 4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 root  bakyt    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo chgrp developers file.txt
+chgrp: invalid group: ‘developers’
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt 4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt 4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 root  bakyt    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ getent group developers
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo groupadd developers
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ getent group developers
+developers:x:1001:
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo chgrp developers file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt      4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt      4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 root  developers    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo chown bakit:developers file.txt
+chown: invalid user: ‘bakit:developers’
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt      4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt      4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 root  developers    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt      4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt      4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 root  developers    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo chown bakit:developers file.txt
+chown: invalid user: ‘bakit:developers’
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo chown bajyt:developers file.txt
+chown: invalid user: ‘bajyt:developers’
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ sudo chown bakyt:developers file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 8
+drwxr-xr-x 2 bakyt bakyt      4096 Mar  4 09:13 .
+drwxr-xr-x 9 bakyt bakyt      4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 bakyt developers    0 Mar  4 09:13 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ su - другой_пользователь
+/auca-com-4241-information-security-spring-2025/lab-6/file.txt
+su: user другой_пользователь does not exist or the user entry does not contain all the required fields
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ cat ~/auca-com-4241-information-security-spring-2025/lab-6/file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$ ls -la
+total 20
+drwxr-xr-x 2 bakyt bakyt      4096 Mar  4 09:28 .
+drwxr-xr-x 9 bakyt bakyt      4096 Mar  4 09:13 ..
+-rwxr-xr-- 1 bakyt developers 8512 Mar  4 09:28 file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-6$
+
