@@ -1,0 +1,171 @@
+bakyt@DESKTOP-PPLFB2P:~$ cd auca-com-4241-information-security-spring-2025/
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ ls
+README.md  lab-1  lab-2  lab-3  lab-4  lab-6  lab-7  lab-8
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ mkdir lab-9
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ ls
+README.md  lab-1  lab-2  lab-3  lab-4  lab-6  lab-7  lab-8  lab-9
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ cd lab-9
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ touch file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ ls
+file.txt
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ sudo apt update
+[sudo] password for bakyt:
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [665 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [128 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [9012 B]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [822 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [177 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [51.9 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [13.5 kB]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [694 kB]
+Get:13 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [137 kB]
+Get:14 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:15 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [19.4 kB]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [4308 B]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 c-n-f Metadata [356 B]
+Get:19 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [15.0 MB]
+Get:20 http://archive.ubuntu.com/ubuntu noble/universe Translation-en [5982 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble/universe amd64 Components [3871 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble/universe amd64 c-n-f Metadata [301 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [269 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble/multiverse Translation-en [118 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Components [35.0 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 c-n-f Metadata [8328 B]
+Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [914 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main Translation-en [206 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [151 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1036 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [259 kB]
+Get:32 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [364 kB]
+Get:33 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [19.9 kB]
+Get:34 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [724 kB]
+Get:35 http://archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [144 kB]
+Get:36 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:37 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [23.4 kB]
+Get:38 http://archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [5308 B]
+Get:39 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:40 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 c-n-f Metadata [552 B]
+Get:41 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+Get:42 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 c-n-f Metadata [112 B]
+Get:43 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [14.2 kB]
+Get:44 http://archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [12.1 kB]
+Get:45 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [20.0 kB]
+Get:46 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 c-n-f Metadata [1104 B]
+Get:47 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:48 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:49 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Get:50 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 32.6 MB in 8s (3999 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+125 packages can be upgraded. Run 'apt list --upgradable' to see them.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ sudo apt install nginx -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  nginx-common
+Suggested packages:
+  fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  nginx nginx-common
+0 upgraded, 2 newly installed, 0 to remove and 125 not upgraded.
+Need to get 552 kB of archives.
+After this operation, 1596 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 nginx-common all 1.24.0-2ubuntu7.1 [31.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 nginx amd64 1.24.0-2ubuntu7.1 [521 kB]
+Fetched 552 kB in 2s (361 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package nginx-common.
+(Reading database ... 40794 files and directories currently installed.)
+Preparing to unpack .../nginx-common_1.24.0-2ubuntu7.1_all.deb ...
+Unpacking nginx-common (1.24.0-2ubuntu7.1) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.24.0-2ubuntu7.1_amd64.deb ...
+Unpacking nginx (1.24.0-2ubuntu7.1) ...
+Setting up nginx (1.24.0-2ubuntu7.1) ...
+Setting up nginx-common (1.24.0-2ubuntu7.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+Processing triggers for man-db (2.12.0-4build2) ...
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ nginx -v
+nginx version: nginx/1.24.0 (Ubuntu)
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2025-03-05 22:57:51 +06; 43s ago
+       Docs: man:nginx(8)
+    Process: 1101 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 1103 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 1104 (nginx)
+      Tasks: 5 (limit: 9427)
+     Memory: 3.7M ()
+     CGroup: /system.slice/nginx.service
+             ├─1104 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─1105 "nginx: worker process"
+             ├─1106 "nginx: worker process"
+             ├─1107 "nginx: worker process"
+             └─1109 "nginx: worker process"
+
+Mar 05 22:57:51 DESKTOP-PPLFB2P systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Mar 05 22:57:51 DESKTOP-PPLFB2P systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ curl http://localhost
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ apt-cache depends nginx
+nginx
+  Depends: libc6
+  Depends: libcrypt1
+  Depends: libpcre2-8-0
+  Depends: libssl3t64
+  Depends: zlib1g
+  Depends: iproute2
+  Depends: nginx-common
+  Breaks: nginx-core
+  Breaks: nginx-extras
+  Breaks: nginx-light
+  Replaces: nginx-core
+  Replaces: nginx-extras
+  Replaces: nginx-light
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ sudo apt update
+sudo apt upgrade nginx -y
+sudo apt upgrade nginx -y
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+125 packages can be upgraded. Run 'apt list --upgradable' to see them.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-9$ sudo apt upgrade nginx -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nginx is already the newest version (1.24.0-2ubuntu7.1).
