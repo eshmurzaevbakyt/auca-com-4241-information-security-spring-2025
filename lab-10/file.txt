@@ -1,0 +1,236 @@
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ mkdir lab-10
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ ls
+README.md  lab-1  lab-10  lab-2  lab-3  lab-4  lab-6  lab-7  lab-8  lab-9
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ cd lab-10
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ ls
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2025-03-05 22:57:51 +06; 27min ago
+       Docs: man:nginx(8)
+   Main PID: 1104 (nginx)
+      Tasks: 5 (limit: 9427)
+     Memory: 3.7M ()
+     CGroup: /system.slice/nginx.service
+             ├─1104 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─1105 "nginx: worker process"
+             ├─1106 "nginx: worker process"
+             ├─1107 "nginx: worker process"
+             └─1109 "nginx: worker process"
+
+Mar 05 22:57:51 DESKTOP-PPLFB2P systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Mar 05 22:57:51 DESKTOP-PPLFB2P systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2025-03-05 22:57:51 +06; 27min ago
+       Docs: man:nginx(8)
+   Main PID: 1104 (nginx)
+      Tasks: 5 (limit: 9427)
+     Memory: 3.7M ()
+     CGroup: /system.slice/nginx.service
+             ├─1104 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─1105 "nginx: worker process"
+             ├─1106 "nginx: worker process"
+             ├─1107 "nginx: worker process"
+             └─1109 "nginx: worker process"
+
+Mar 05 22:57:51 DESKTOP-PPLFB2P systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Mar 05 22:57:51 DESKTOP-PPLFB2P systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo nano /etc/nginx/sites-available/my_site
+[sudo] password for bakyt:
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo nano /var/www/html/my_site.html
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo ln -s /etc/nginx/sites-available/my_site /etc/nginx/sites-enabled/
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo systemctl reload nginx
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ My site on port 8000
+My: command not found
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo nano /etc/nginx/sites-available/my_site
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo systemctl reload nginx
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ pip install flask
+pi.py
+Command 'pip' not found, but can be installed with:
+sudo apt install python3-pip
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ nano api.py
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ python3 api.py
+Traceback (most recent call last):
+  File "/home/bakyt/auca-com-4241-information-security-spring-2025/lab-10/api.py", line 1, in <module>
+    from flask import Flask
+ModuleNotFoundError: No module named 'flask'
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo apt install python3-pip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm17t64
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  build-essential bzip2 cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev fakeroot g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libde265-0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-13-dev libgd3 libgomp1 libheif-plugin-aomdec libheif-plugin-aomenc libheif-plugin-libde265 libheif1 libhwasan0 libisl23 libitm1 libjs-jquery libjs-sphinxdoc libjs-underscore liblsan0 libmpc3
+  libpython3-dev libpython3.12-dev libquadmath0 libstdc++-13-dev libtsan2 libubsan1 libxpm4 linux-libc-dev lto-disabled-list make manpages-dev python3-dev python3-wheel python3.12-dev rpcsvc-proto zlib1g-dev
+Suggested packages:
+  bzip2-doc cpp-doc gcc-13-locales cpp-13-doc debian-keyring g++-multilib g++-13-multilib gcc-13-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-13-multilib gdb-x86-64-linux-gnu glibc-doc bzr libgd-tools
+  libheif-plugin-x265 libheif-plugin-ffmpegdec libheif-plugin-jpegdec libheif-plugin-jpegenc libheif-plugin-j2kdec libheif-plugin-j2kenc libheif-plugin-rav1e libheif-plugin-svtenc libstdc++-13-doc make-doc
+The following NEW packages will be installed:
+  build-essential bzip2 cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev fakeroot g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libde265-0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-13-dev libgd3 libgomp1 libheif-plugin-aomdec libheif-plugin-aomenc libheif-plugin-libde265 libheif1 libhwasan0 libisl23 libitm1 libjs-jquery libjs-sphinxdoc libjs-underscore liblsan0 libmpc3
+  libpython3-dev libpython3.12-dev libquadmath0 libstdc++-13-dev libtsan2 libubsan1 libxpm4 linux-libc-dev lto-disabled-list make manpages-dev python3-dev python3-pip python3-wheel python3.12-dev rpcsvc-proto zlib1g-dev
+0 upgraded, 66 newly installed, 0 to remove and 0 not upgraded.
+Need to get 81.3 MB of archives.
+After this operation, 284 MB of additional disk space will be used.
+Do you want to continue? [Y/n] t
+Abort.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo apt install python3-pip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm17t64
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  build-essential bzip2 cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev fakeroot g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libde265-0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-13-dev libgd3 libgomp1 libheif-plugin-aomdec libheif-plugin-aomenc libheif-plugin-libde265 libheif1 libhwasan0 libisl23 libitm1 libjs-jquery libjs-sphinxdoc libjs-underscore liblsan0 libmpc3
+  libpython3-dev libpython3.12-dev libquadmath0 libstdc++-13-dev libtsan2 libubsan1 libxpm4 linux-libc-dev lto-disabled-list make manpages-dev python3-dev python3-wheel python3.12-dev rpcsvc-proto zlib1g-dev
+Suggested packages:
+  bzip2-doc cpp-doc gcc-13-locales cpp-13-doc debian-keyring g++-multilib g++-13-multilib gcc-13-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-13-multilib gdb-x86-64-linux-gnu glibc-doc bzr libgd-tools
+  libheif-plugin-x265 libheif-plugin-ffmpegdec libheif-plugin-jpegdec libheif-plugin-jpegenc libheif-plugin-j2kdec libheif-plugin-j2kenc libheif-plugin-rav1e libheif-plugin-svtenc libstdc++-13-doc make-doc
+The following NEW packages will be installed:
+  build-essential bzip2 cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev fakeroot g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu
+  javascript-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev libcc1-0 libcrypt-dev libde265-0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-13-dev libgd3 libgomp1 libheif-plugin-aomdec libheif-plugin-aomenc libheif-plugin-libde265 libheif1 libhwasan0 libisl23 libitm1 libjs-jquery libjs-sphinxdoc libjs-underscore liblsan0 libmpc3
+  libpython3-dev libpython3.12-dev libquadmath0 libstdc++-13-dev libtsan2 libubsan1 libxpm4 linux-libc-dev lto-disabled-list make manpages-dev python3-dev python3-pip python3-wheel python3.12-dev rpcsvc-proto zlib1g-dev
+0 upgraded, 66 newly installed, 0 to remove and 0 not upgraded.
+Need to get 81.3 MB of archives.
+After this operation, 284 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Abort.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo apt install python3-pip
+Reading package lists... Done
+Building dependency tree... Done
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ pip install flask
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ nano api.py
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ python3 api.py
+Traceback (most recent call last):
+  File "/home/bakyt/auca-com-4241-information-security-spring-2025/lab-10/api.py", line 1, in <module>
+    from flask import Flask
+ModuleNotFoundError: No module named 'flask'
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo apt install python3-flask -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm17t64
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  python3-asgiref python3-itsdangerous python3-pyasyncore python3-pyinotify python3-simplejson python3-werkzeug
+Suggested packages:
+  python3-dotenv python-flask-doc python-pyinotify-doc ipython3 python-werkzeug-doc python3-lxml python3-watchdog
+The following NEW packages will be installed:
+  python3-asgiref python3-flask python3-itsdangerous python3-pyasyncore python3-pyinotify python3-simplejson python3-werkzeug
+0 upgraded, 7 newly installed, 0 to remove and 0 not upgraded.
+Need to get 382 kB of archives.
+After this operation, 1882 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-asgiref all 3.7.2-1 [24.8 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-itsdangerous all 2.1.2-4 [14.6 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-werkzeug all 3.0.1-3ubuntu0.2 [170 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-flask all 3.0.2-1ubuntu1 [82.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-pyasyncore all 1.0.2-2 [10.1 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-pyinotify all 0.9.6-2ubuntu1 [25.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-simplejson amd64 3.19.2-1build2 [54.5 kB]
+Fetched 382 kB in 2s (231 kB/s)
+Selecting previously unselected package python3-asgiref.
+(Reading database ... 47825 files and directories currently installed.)
+Preparing to unpack .../0-python3-asgiref_3.7.2-1_all.deb ...
+Unpacking python3-asgiref (3.7.2-1) ...
+Selecting previously unselected package python3-itsdangerous.
+Preparing to unpack .../1-python3-itsdangerous_2.1.2-4_all.deb ...
+Unpacking python3-itsdangerous (2.1.2-4) ...
+Selecting previously unselected package python3-werkzeug.
+Preparing to unpack .../2-python3-werkzeug_3.0.1-3ubuntu0.2_all.deb ...
+Unpacking python3-werkzeug (3.0.1-3ubuntu0.2) ...
+Selecting previously unselected package python3-flask.
+Preparing to unpack .../3-python3-flask_3.0.2-1ubuntu1_all.deb ...
+Unpacking python3-flask (3.0.2-1ubuntu1) ...
+Selecting previously unselected package python3-pyasyncore.
+Preparing to unpack .../4-python3-pyasyncore_1.0.2-2_all.deb ...
+Unpacking python3-pyasyncore (1.0.2-2) ...
+Selecting previously unselected package python3-pyinotify.
+Preparing to unpack .../5-python3-pyinotify_0.9.6-2ubuntu1_all.deb ...
+Unpacking python3-pyinotify (0.9.6-2ubuntu1) ...
+Selecting previously unselected package python3-simplejson.
+Preparing to unpack .../6-python3-simplejson_3.19.2-1build2_amd64.deb ...
+Unpacking python3-simplejson (3.19.2-1build2) ...
+Setting up python3-itsdangerous (2.1.2-4) ...
+Setting up python3-simplejson (3.19.2-1build2) ...
+Setting up python3-werkzeug (3.0.1-3ubuntu0.2) ...
+Setting up python3-pyasyncore (1.0.2-2) ...
+Setting up python3-asgiref (3.7.2-1) ...
+Setting up python3-flask (3.0.2-1ubuntu1) ...
+Setting up python3-pyinotify (0.9.6-2ubuntu1) ...
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ python3 -m flask --version
+Python 3.12.3
+Flask 3.0.2
+Werkzeug 3.0.1
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ python3 api.py
+ * Serving Flask app 'api'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Mar/2025 23:36:23] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [05/Mar/2025 23:36:30] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [05/Mar/2025 23:36:54] "GET / HTTP/1.0" 404 -
+^Cbakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ curl http://127.0.0.1:5000/api/
+curl: (7) Failed to connect to 127.0.0.1 port 5000 after 0 ms: Couldn't connect to server
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ ls
+api.py
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ nano api.py
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ curl http://127.0.0.1:5000/api/
+curl: (7) Failed to connect to 127.0.0.1 port 5000 after 0 ms: Couldn't connect to server
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ python3 api.py
+ * Serving Flask app 'api'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+^Cbakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ curl http://127.0.0.1:5000/api/
+curl: (7) Failed to connect to 127.0.0.1 port 5000 after 0 ms: Couldn't connect to server
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ curl http://127.0.0.1:5000/api/
+curl: (7) Failed to connect to 127.0.0.1 port 5000 after 0 ms: Couldn't connect to server
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ sudo nano /etc/nginx/sites-available/my_site
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ curl http://127.0.0.1:5000/api/
+curl: (7) Failed to connect to 127.0.0.1 port 5000 after 0 ms: Couldn't connect to server
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-10$ python3 api.py
+ * Serving Flask app 'api'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Mar/2025 23:45:55] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [05/Mar/2025 23:46:27] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [05/Mar/2025 23:46:32] "GET /api/ HTTP/1.1" 200 -
