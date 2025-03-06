@@ -1,0 +1,7 @@
+sudo adduser bakyt
+cat /etc/passwd | grep bakyt
+su - bakyt 
+whoami
+chfn
+sudo groupadd developers
+sudo usermod -aG developers bakyt
