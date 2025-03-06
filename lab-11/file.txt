@@ -1,0 +1,372 @@
+bakyt@DESKTOP-PPLFB2P:~$ ls
+auca-com-4241-information-security-spring-2025  wsl
+bakyt@DESKTOP-PPLFB2P:~$ cd auca-com-4241-information-security-spring-2025/
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ ls
+README.md  lab-1  lab-10  lab-2  lab-3  lab-4  lab-6  lab-7  lab-8  lab-9
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ mkdir lab-11
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ ls
+README.md  lab-1  lab-10  lab-11  lab-2  lab-3  lab-4  lab-6  lab-7  lab-8  lab-9
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025$ cd lab-11
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ ls
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ sudo apt update
+[sudo] password for bakyt:
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [667 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [128 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [8996 B]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [51.9 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [700 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [138 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Get:12 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [916 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main Translation-en [206 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [151 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [364 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [729 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [145 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:21 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+Get:22 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [20.0 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:24 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Fetched 4605 kB in 3s (1499 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ sudo apt install -y python3 python3-pip python3-setuptools git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+python3 is already the newest version (3.12.3-0ubuntu2).
+python3 set to manually installed.
+python3-pip is already the newest version (24.0+dfsg-1ubuntu1.1).
+python3-setuptools is already the newest version (68.1.2-2ubuntu1.1).
+python3-setuptools set to manually installed.
+git is already the newest version (1:2.43.0-1ubuntu7.2).
+git set to manually installed.
+The following package was automatically installed and is no longer required:
+  libllvm17t64
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ git clone https://github.com/ytdl-org/youtube-dl.git
+
+Cloning into 'youtube-dl'...
+remote: Enumerating objects: 105161, done.
+remote: Counting objects: 100% (134/134), done.
+remote: Compressing objects: 100% (33/33), done.
+error: RPC failed; curl 92 HTTP/2 stream 5 was not closed cleanly: CANCEL (err 8)
+error: 5914 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ ls
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ git clone https://github.com/ytdl-org/youtube-dl.git
+Cloning into 'youtube-dl'...
+remote: Enumerating objects: 105161, done.
+remote: Counting objects: 100% (134/134), done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 105161 (delta 120), reused 101 (delta 101), pack-reused 105027 (from 5)
+Receiving objects: 100% (105161/105161), 63.97 MiB | 2.53 MiB/s, done.
+Resolving deltas: 100% (78019/78019), done.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ ls
+youtube-dl
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ cd youtube-dl/
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ ls
+AUTHORS  CONTRIBUTING.md  ChangeLog  LICENSE  MANIFEST.in  Makefile  README.md  bin  devscripts  docs  setup.cfg  setup.py  test  tox.ini  youtube-dl.plugin.zsh  youtube_dl
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ sudo python3 setup.py install
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ youtube-dl --version
+2021.12.17
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ youtube-dl https://www.youtube.com/watch?v=dQw4w9WgXcQ
+[youtube] dQw4w9WgXcQ: Downloading webpage
+[youtube] dQw4w9WgXcQ: Downloading TVHTML5 API JSON
+[youtube] dQw4w9WgXcQ: Downloading player f6e09c70
+[download] Destination: Rick Astley - Never Gonna Give You Up (Official Music Video)-dQw4w9WgXcQ.mp4
+[download]   0.0% of 8.68MiB at 388.70KiB/s ETA 00:22[download] Got server HTTP error: Downloaded 3801 bytes, expected 9100820 bytes. Retrying (attempt 1 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 2 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 3 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 4 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 5 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 6 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 7 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 8 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 9 of 10)...
+[download] Got server HTTP error: HTTP Error 503: Service Unavailable. Retrying (attempt 10 of 10)...
+ERROR: giving up after 10 retries
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ sudo apt update
+sudo apt install -y git make
+sudo apt install -y git make
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ sudo apt install -y git make
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.43.0-1ubuntu7.2).
+make is already the newest version (4.3-4.1build2).
+make set to manually installed.
+The following package was automatically installed and is no longer required:
+  libllvm17t64
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ git clone https://github.com/dylanaraps/neofetch.git
+Cloning into 'neofetch'...
+remote: Enumerating objects: 16689, done.
+remote: Counting objects: 100% (2290/2290), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 16689 (delta 2285), reused 2282 (delta 2282), pack-reused 14399 (from 1)
+Receiving objects: 100% (16689/16689), 7.21 MiB | 790.00 KiB/s, done.
+Resolving deltas: 100% (10149/10149), done.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ ls
+ AUTHORS           ChangeLog   MANIFEST.in   README.md                                                                            bin     devscripts   docs       setup.cfg   test      youtube-dl.plugin.zsh   youtube_dl.egg-info
+ CONTRIBUTING.md   LICENSE     Makefile     'Rick Astley - Never Gonna Give You Up (Official Music Video)-dQw4w9WgXcQ.mp4.part'   build   dist         neofetch   setup.py    tox.ini   youtube_dl
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ rm -r neofetch/
+rm: remove write-protected regular file 'neofetch/.git/objects/pack/pack-a9834fea9dc713ee264688969668126286a76b9a.pack'? yes
+rm: remove write-protected regular file 'neofetch/.git/objects/pack/pack-a9834fea9dc713ee264688969668126286a76b9a.rev'? y
+rm: remove write-protected regular file 'neofetch/.git/objects/pack/pack-a9834fea9dc713ee264688969668126286a76b9a.idx'? y
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ ls
+ AUTHORS           ChangeLog   MANIFEST.in   README.md                                                                            bin     devscripts   docs        setup.py   tox.ini                 youtube_dl
+ CONTRIBUTING.md   LICENSE     Makefile     'Rick Astley - Never Gonna Give You Up (Official Music Video)-dQw4w9WgXcQ.mp4.part'   build   dist         setup.cfg   test       youtube-dl.plugin.zsh   youtube_dl.egg-info
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ ls
+ AUTHORS           ChangeLog   MANIFEST.in   README.md                                                                            bin     devscripts   docs        setup.py   tox.ini                 youtube_dl
+ CONTRIBUTING.md   LICENSE     Makefile     'Rick Astley - Never Gonna Give You Up (Official Music Video)-dQw4w9WgXcQ.mp4.part'   build   dist         setup.cfg   test       youtube-dl.plugin.zsh   youtube_dl.egg-info
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/youtube-dl$ cd ..
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ ls
+youtube-dl
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ git clone https://github.com/dylanaraps/neofetch.git
+Cloning into 'neofetch'...
+remote: Enumerating objects: 16689, done.
+remote: Counting objects: 100% (2324/2324), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 16689 (delta 2318), reused 2315 (delta 2315), pack-reused 14365 (from 1)
+Receiving objects: 100% (16689/16689), 7.26 MiB | 2.76 MiB/s, done.
+Resolving deltas: 100% (10149/10149), done.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ ls
+neofetch  youtube-dl
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ cd neofetch
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/neofetch$ sudo make install
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/neofetch$ neofetch
+            .-/+oossssoo+\-.               bakyt@DESKTOP-PPLFB2P
+        ´:+ssssssssssssssssss+:`           ---------------------
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 24.04.2 LTS on Windows 10.0.19045 x86_64
+    .ossssssssssssssssssdMMMNysssso.       Kernel: 5.15.167.4-microsoft-standard-WSL2
+   /ssssssssssshdmmNNmmyNMMMMhssssss\      Uptime: 10 mins
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Packages: 605 (dpkg)
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss\    Shell: bash 5.2.21
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: Adwaita [GTK3]
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Icons: Adwaita [GTK3]
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   Terminal: Relay(295)
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   CPU: Intel i7-7600U (4) @ 2.904GHz
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Memory: 567MiB / 7862MiB
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.
+ \sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
+  +sssssssssdmydMMMMMMMMddddyssssssss+
+   \ssssssssssshdmNNNNmyNMMMMhssssss/
+    .ossssssssssssssssssdMMMNysssso.
+      -+sssssssssssssssssyyyssss+-
+        `:+ssssssssssssssssss+:`
+            .-\+oossssoo+/-.
+
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/neofetch$ sudo apt install -y git build-essential libncursesw5-dev autotools-dev autoconf
+Reading package lists... Done
+
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/neofetch$ cd ..
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ ls
+neofetch  youtube-dl
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ git clone https://github.com/htop-dev/htop.git
+Cloning into 'htop'...
+remote: Enumerating objects: 19753, done.
+remote: Counting objects: 100% (1869/1869), done.
+remote: Compressing objects: 100% (220/220), done.
+remote: Total 19753 (delta 1705), reused 1654 (delta 1649), pack-reused 17884 (from 4)
+Receiving objects: 100% (19753/19753), 6.50 MiB | 2.54 MiB/s, done.
+Resolving deltas: 100% (15257/15257), done.
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ ls
+htop  neofetch  youtube-dl
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11$ cd htop
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/htop$ ./autogen.sh
+autoreconf: export WARNINGS=all
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: creating directory build-aux
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /usr/bin/autoconf --force
+configure.ac:401: warning: pkg.m4 is absent or older than version 0.16; this 'configure' would have incomplete pkg-config support
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:69: installing 'build-aux/compile'
+configure.ac:23: installing 'build-aux/config.guess'
+configure.ac:23: installing 'build-aux/config.sub'
+configure.ac:24: installing 'build-aux/install-sh'
+configure.ac:24: installing 'build-aux/missing'
+Makefile.am: installing './INSTALL'
+Makefile.am: installing 'build-aux/depcomp'
+autoreconf: Leaving directory '.'
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/htop$ ./configure
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/param.h... yes
+checking for sys/time.h... yes
+checking for sys/utsname.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/mkdev.h... no
+checking for sys/sysmacros.h... yes
+checking for execinfo.h... yes
+checking for mbstate_t... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for uid_t in sys/types.h... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for alloc_size... yes
+checking for access... yes
+checking for nonnull... yes
+checking for returns_nonnull... yes
+checking for NaN support... yes
+checking for __builtin_ctz... yes
+checking for library containing ceil... -lm
+checking for library containing dlopen... none required
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for dladdr... yes
+checking for faccessat... yes
+checking for fstatat... yes
+checking for host_get_clock_service... no
+checking for memfd_create... yes
+checking for openat... yes
+checking for readlinkat... yes
+checking for sched_getscheduler... yes
+checking for sched_setscheduler... yes
+checking for strchrnul... yes
+found ncursesw6 information through ncursesw6-config
+checking for keypad in -lncursesw -ltinfo... yes
+checking for doupdate in -lncursesw -ltinfo... yes
+checking for wadd_wchnstr in -lncursesw -ltinfo... yes
+checking for ncursesw/curses.h... yes
+checking for ncursesw/term.h... yes
+checking whether the curses header works... yes
+checking for set_escdelay... yes
+checking for getmouse... yes
+checking for usable sched_setaffinity... yes
+checking for backtrace in -lunwind... no
+checking for libunwind.h... no
+checking for libunwind/libunwind.h... no
+checking for library containing backtrace... none required
+checking for cap_init in -lcap... no
+checking for sys/capability.h... no
+checking for netlink/attr.h... no
+checking for netlink/handlers.h... no
+checking for netlink/msg.h... no
+checking for sensors/sensors.h... no
+checking whether C compiler accepts -Wextra-semi-stmt... no
+checking whether C compiler accepts -Wimplicit-int-conversion... no
+checking whether C compiler accepts -Wnull-dereference... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating htop.1
+config.status: creating config.h
+config.status: executing depfiles commands
+
+  htop 3.4.0-dev-3.3.0-295-g325e6a4
+
+  platform:                  linux (linux-gnu)
+  os-release file:           /etc/os-release
+  (Linux) proc directory:    /proc
+  (Linux) openvz:            no
+  (Linux) vserver:           no
+  (Linux) ancient vserver:   no
+  (Linux) delay accounting:  no
+  (Linux) sensors:           no
+  (Linux) capabilities:      no
+  unicode:                   yes
+  affinity:                  yes
+  unwind:                    no
+  hwloc:                     no
+  debug:                     no
+  static:                    no
+
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/htop$ make
+make  all-am
+make[1]: Leaving directory '/home/bakyt/auca-com-4241-information-security-spring-2025/lab-11/htop'
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/htop$ sudo make install
+make[1]: Entering directory '/home/bakyt/auca-com-4241-information-security-spring-2025/lab-11/htop'
+ /usr/bin/mkdir -p '/usr/local/bin'
+  /usr/bin/install -c htop '/usr/local/bin'
+ /usr/bin/mkdir -p '/usr/local/share/icons/hicolor/scalable/apps'
+ /usr/bin/install -c -m 644 htop.svg '/usr/local/share/icons/hicolor/scalable/apps'
+ /usr/bin/mkdir -p '/usr/local/share/applications'
+ /usr/bin/install -c -m 644 htop.desktop '/usr/local/share/applications'
+ /usr/bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 htop.1 '/usr/local/share/man/man1'
+ /usr/bin/mkdir -p '/usr/local/share/pixmaps'
+ /usr/bin/install -c -m 644 htop.png '/usr/local/share/pixmaps'
+make[1]: Leaving directory '/home/bakyt/auca-com-4241-information-security-spring-2025/lab-11/htop'
+bakyt@DESKTOP-PPLFB2P:~/auca-com-4241-information-security-spring-2025/lab-11/htop$ htop
