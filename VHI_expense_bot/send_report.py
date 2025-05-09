@@ -5,7 +5,7 @@ from config import BOT_TOKEN, CHAT_ID
 
 def load_expenses():
     try:
-        with open("expenses.json", "r") as file:
+        with open("data/expenses.json", "r") as file:
             return json.load(file)
     except FileNotFoundError:
         return []
@@ -18,8 +18,8 @@ def get_last_week_expenses(data):
 def format_report(expenses):
     if not expenses:
         return "No expenses were recorded this week."
-    total = sum(float(item["price"]) for item in expenses)
-    lines = [f"{item['date']}: {item['item']} — {item['price']} сом" for item in expenses]
+    lines = [f"{item['date']}: {item['category']} — {item['amount']} сом" for item in expenses]
+    total = sum(float(item["amount"]) for item in expenses)
     return f"Your weekly report:\n\n" + "\n".join(lines) + f"\n\nTotal: {total} сом"
 
 def send_telegram_message(message):
@@ -33,4 +33,10 @@ if __name__ == "__main__":
     weekly_expenses = get_last_week_expenses(expenses)
     report = format_report(weekly_expenses)
     success = send_telegram_message(report)
-    print("Report sent." if success else "Failed to send report.")
+    
+    if success:
+        print("Report sent.")
+    else:
+        print("Failed to send report.")
+        print("Full response from Telegram API:")
+        print(report) 

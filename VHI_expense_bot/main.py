@@ -1,82 +1,28 @@
-import json
-import os
-from datetime import datetime
+from telegram import Update
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from expenses import add_expense_programmatically
 
-DATA_FILE = "data/expenses.json"
+TOKEN = "7480527089:AAFhIvVgwUiSvdERK0SkLxwgy19g6TR3ndI"
 
-def ensure_data_file():
-    os.makedirs("data", exist_ok=True)
-    if not os.path.exists(DATA_FILE):
-        with open(DATA_FILE, "w") as f:
-            json.dump([], f)
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Привет! Отправь /add <описание> <сумма> <дата>, чтобы сохранить расход.")
 
-def load_expenses():
-    with open(DATA_FILE, "r") as f:
-        return json.load(f)
+async def add(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    try:
+        _, category, amount, date = update.message.text.split(" ", 3)
+        add_expense_programmatically(date, category, float(amount), method="telegram")
+        await update.message.reply_text("Расход добавлен!")
+    except Exception as e:
+        await update.message.reply_text(
+            "Ошибка. Используй: /add категория сумма дата\n"
+            "например: /add Анализ 1500 2024-05-10"
+        )
 
-def save_expenses(expenses):
-    with open(DATA_FILE, "w") as f:
-        json.dump(expenses, f, indent=2)
+if __name__ == '__main__':
+    app = ApplicationBuilder().token(TOKEN).build()
 
-def add_expense():
-    date = input("Enter date (YYYY-MM-DD): ").strip()
-    category = input("Enter category (e.g., Labs, Medication): ").strip()
-    amount = float(input("Enter amount: ").strip())
-    method = input("Payment method (cash/card): ").strip().lower()
-    note = input("Optional note: ").strip()
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("add", add))
 
-    new_expense = {
-        "date": date,
-        "category": category,
-        "amount": amount,
-        "method": method,
-        "note": note
-    }
-
-    expenses = load_expenses()
-    expenses.append(new_expense)
-    save_expenses(expenses)
-    print("Expense added successfully.")
-
-def view_expenses():
-    expenses = load_expenses()
-    if not expenses:
-        print("No expenses found.")
-        return
-    for idx, item in enumerate(expenses, start=1):
-        print(f"{idx}. {item['date']} | {item['category']} | {item['amount']} | {item['method']} | {item['note']}")
-
-def delete_expense():
-    expenses = load_expenses()
-    view_expenses()
-    index = int(input("Enter index to delete: ").strip())
-    if 1 <= index <= len(expenses):
-        deleted = expenses.pop(index - 1)
-        save_expenses(expenses)
-        print(f"Deleted: {deleted}")
-    else:
-        print("Invalid index.")
-
-def main():
-    ensure_data_file()
-    while True:
-        print("\n--- VHI Expense Tracker ---")
-        print("1. Add new expense")
-        print("2. View all expenses")
-        print("3. Delete an expense")
-        print("4. Exit")
-        choice = input("Choose an option: ").strip()
-
-        if choice == "1":
-            add_expense()
-        elif choice == "2":
-            view_expenses()
-        elif choice == "3":
-            delete_expense()
-        elif choice == "4":
-            break
-        else:
-            print("Invalid choice. Try again.")
-
-if __name__ == "__main__":
-    main()
+    print("Бот запущен...")
+    app.run_polling()
